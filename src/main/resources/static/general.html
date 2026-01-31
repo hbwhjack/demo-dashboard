@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>一般</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="left"><span class="logo"></span><strong>Codex</strong></div>
+    <div class="right"><span>設定</span><span>ドキュメント</span><span class="pill">PLUS</span></div>
+  </div>
+
+  <div class="notice">GitHub アカウントが接続されていません。今すぐ接続してください。</div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h3>設定</h3>
+      <div class="nav">
+        <a class="item active" href="general.html">一般</a>
+        <a class="item" href="environment.html">環境</a>
+        <a class="item" href="code-review.html">コードレビュー</a>
+        <a class="item" href="connectors.html">コネクター</a>
+        <a class="item" href="index.html">使用状況</a>
+        <a class="item" href="data-control.html">データ コントロール</a>
+      </div>
+    </aside>
+
+    <main class="content">
+      <h2>一般</h2>
+      <div class="divider"></div>
+      <div class="save-status" id="saveStatus">設定を読み込み中...</div>
+      <div class="grid-2">
+        <div class="card">
+          <h4>表示</h4>
+          <div class="list">
+            <div class="setting-row">
+              <label for="themeSelect">テーマ</label>
+              <select id="themeSelect" data-setting-key="display.theme" data-default="dark">
+                <option value="dark">ダーク</option>
+                <option value="light">ライト</option>
+              </select>
+            </div>
+            <div class="setting-row">
+              <label for="fontSizeSelect">フォントサイズ</label>
+              <select id="fontSizeSelect" data-setting-key="display.fontSize" data-default="medium">
+                <option value="small">小</option>
+                <option value="medium">中</option>
+                <option value="large">大</option>
+              </select>
+            </div>
+            <div class="setting-row">
+              <label>アニメーション</label>
+              <div class="toggle">
+                <input id="animationsToggle" type="checkbox" data-setting-key="display.animations" data-default="true" />
+                <span>有効</span>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h4>通知</h4>
+          <div class="list">
+            <div class="setting-row">
+              <label>更新のお知らせ</label>
+              <div class="toggle">
+                <input type="checkbox" data-setting-key="notifications.updates" data-default="true" />
+                <span>ON</span>
+              </div>
+            </div>
+            <div class="setting-row">
+              <label>メンテナンス通知</label>
+              <div class="toggle">
+                <input type="checkbox" data-setting-key="notifications.maintenance" data-default="true" />
+                <span>ON</span>
+              </div>
+            </div>
+            <div class="setting-row">
+              <label>ヒント表示</label>
+              <div class="toggle">
+                <input type="checkbox" data-setting-key="notifications.tips" data-default="true" />
+                <span>ON</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="app.js" defer></script>
+</body>
+</html>

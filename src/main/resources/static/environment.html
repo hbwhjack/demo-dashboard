@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>環境</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="topbar">
+    <div class="left"><span class="logo"></span><strong>Codex</strong></div>
+    <div class="right"><span>設定</span><span>ドキュメント</span><span class="pill">PLUS</span></div>
+  </div>
+
+  <div class="notice">GitHub アカウントが接続されていません。今すぐ接続してください。</div>
+
+  <div class="layout">
+    <aside class="sidebar">
+      <h3>設定</h3>
+      <div class="nav">
+        <a class="item" href="general.html">一般</a>
+        <a class="item active" href="environment.html">環境</a>
+        <a class="item" href="code-review.html">コードレビュー</a>
+        <a class="item" href="connectors.html">コネクター</a>
+        <a class="item" href="index.html">使用状況</a>
+        <a class="item" href="data-control.html">データ コントロール</a>
+      </div>
+    </aside>
+
+    <main class="content">
+      <h2>環境</h2>
+      <div class="divider"></div>
+      <div class="save-status" id="saveStatus">設定を読み込み中...</div>
+      <div class="grid-2">
+        <div class="card">
+          <h4>実行環境</h4>
+          <div class="list">
+            <div class="setting-row">
+              <label for="osInput">OS</label>
+              <input id="osInput" type="text" data-setting-key="environment.os" data-default="Linux (WSL2)" />
+            </div>
+            <div class="setting-row">
+              <label for="nodeInput">Node</label>
+              <input id="nodeInput" type="text" data-setting-key="environment.node" data-default="v24.x" />
+            </div>
+            <div class="setting-row">
+              <label for="browserInput">ブラウザ</label>
+              <input id="browserInput" type="text" data-setting-key="environment.browser" data-default="Chromium" />
+            </div>
+          </div>
+        </div>
+        <div class="card">
+          <h4>リソース</h4>
+          <div class="list">
+            <div class="setting-row">
+              <label for="cpuInput">CPU</label>
+              <input id="cpuInput" type="text" data-setting-key="resources.cpu" data-default="4 コア" />
+            </div>
+            <div class="setting-row">
+              <label for="memoryInput">メモリ</label>
+              <input id="memoryInput" type="text" data-setting-key="resources.memory" data-default="8 GB" />
+            </div>
+            <div class="setting-row">
+              <label for="diskInput">ディスク</label>
+              <input id="diskInput" type="text" data-setting-key="resources.disk" data-default="120 GB" />
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </div>
+  <script src="app.js" defer></script>
+</body>
+</html>
